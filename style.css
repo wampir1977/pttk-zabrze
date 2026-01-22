@@ -1,0 +1,195 @@
+/* Podstawowe style */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #2c3e50;
+  background-color: #f0f3f0; /* Jasny, "leśny" szary */
+}
+
+/* Nagłówek */
+.main-header {
+  background-color: #1a2e1a; /* Ciemna zieleń z logo */
+  color: white;
+  padding: 10px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 4px solid #95bd3d; /* Jasnozielony akcent */
+}
+
+.header-logos img {
+  display: block;
+}
+
+.logo-main {
+  height: 60px; /* Dopasowanie wysokości głównego logo */
+  width: auto;
+}
+
+.logo-pttk {
+  height: 50px; /* Logo PTTK jest zazwyczaj kwadratowe/okrągłe */
+  width: auto;
+}
+
+.top-nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.top-nav li {
+  margin: 0 15px;
+}
+
+.top-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.top-nav a:hover {
+  color: #95bd3d;
+}
+
+/* Układ główny */
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 20px auto;
+  gap: 20px;
+  padding: 0 15px;
+}
+
+/* Menu boczne */
+.sidebar {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-width: 280px;
+}
+
+.side-nav h3 {
+  border-bottom: 3px solid #4a7c2c; /* Trawiasta zieleń */
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  color: #1a2e1a;
+}
+
+.nav-section {
+  margin-bottom: 20px;
+}
+
+.nav-section h4 {
+  font-size: 0.85rem;
+  color: #4a7c2c;
+  margin-bottom: 8px;
+  border-left: 3px solid #95bd3d;
+  padding-left: 8px;
+}
+
+.side-nav ul {
+  list-style: none;
+}
+
+.side-nav li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.side-nav a {
+  text-decoration: none;
+  color: #2c3e50;
+  transition: padding-left 0.3s;
+}
+
+.side-nav a:hover {
+  color: #4a7c2c;
+  padding-left: 5px;
+}
+
+.fb-link {
+  color: #3b5998 !important;
+  font-weight: bold;
+}
+
+/* Treść główna */
+.content {
+  flex: 3;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+  color: #1a2e1a;
+  margin-bottom: 20px;
+}
+
+/* Stopka */
+.main-footer {
+  text-align: center;
+  padding: 30px;
+  background: #1a2e1a;
+  color: white;
+  margin-top: 40px;
+  border-top: 4px solid #4a7c2c;
+}
+
+.hero-section {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/background-mountain.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+.hero-section h1 {
+  font-size: 2.5rem;
+  color: #95bd3d !important; /* Jasnozielony dla widoczności */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin-bottom: 15px;
+}
+.hero-section p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+/* RESPONSYWNOŚĆ */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .top-nav ul {
+    margin: 10px 0;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    order: 2;
+  }
+
+  .content {
+    order: 1;
+  }
+}
