@@ -1,11 +1,186 @@
-<main class="content">
-  <h1>Nasze Wycieczki</h1>
-  <div class="trips-grid">
-    <div class="trip-card">Wycieczka 1</div>
-    <div class="trip-card">Wycieczka 2</div>
-    <div class="trip-card">Wycieczka 3</div>
-    <div class="trip-card">Wycieczka 4</div>
-    <div class="trip-card">Wycieczka 5</div>
-    <div class="trip-card">Wycieczka 6</div>
-  </div>
-</main>
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PTTK WĘDROWIEC - Oddział Zabrze</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-logos">
+        <img src="../logo.png" Logo Wędrowiec class="logo-main" />
+      </div>
+
+      <nav class="top-nav">
+        <ul>
+          <li><a href="../index.html">Strona główna</a></li>
+          <li><a href="news.html">Aktualności</a></li>
+          <li><a href="wycieczki.html">Wycieczki</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-logos">
+        <img src="../LOGOPTTK.jpg" alt="Logo Wędrowiec" class="logo-main" />
+      </div>
+    </header>
+
+    <div class="container">
+      <aside class="sidebar">
+        <nav class="side-nav">
+          <h3>MENU GŁÓWNE</h3>
+
+          <div class="nav-section">
+            <h4>STRUKTURA ODDZIAŁU</h4>
+            <ul>
+              <li>
+                <strong>WŁADZE:</strong>
+                <a href="zarzad.html">Zarząd Oddziału</a>
+              </li>
+              <li>
+                <strong>KOMISJE:</strong>
+                <a href="ktg.html">Komisja turystyki Górskiej (KTG)</a>
+              </li>
+              <li>
+                <strong>REFERATY:</strong>
+                <a href="trw.html">Terenowy Referat Weryfikacyjny (TRW)</a>
+              </li>
+              <li>
+                <strong>KOŁA:</strong>
+                <a href="horyzont.html">Horyzont</a>,
+                <a href="piechur.html">Piechur</a>
+              </li>
+              <li>
+                <strong>KADRA:</strong>
+                <a href="przodownicy.html">Przodownicy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="nav-section">
+            <h4>DOKUMENTY</h4>
+            <ul>
+              <li><a href="regulaminy.html">Regulamin GOT</a></li>
+            </ul>
+          </div>
+
+          <div class="nav-section">
+            <h4>ODZNAKI</h4>
+            <ul>
+              <li><a href="got.html">GOT</a></li>
+              <li><a href="otp.html">OTP</a></li>
+            </ul>
+          </div>
+
+          <div class="nav-section">
+            <ul>
+              <li>
+                <a href="galeria.html">GALERIA</a>
+              </li>
+              <li>
+                <a href="archiwum.html">ARCHIWUM</a>
+              </li>
+              <li>
+                <a href="download.html">DOWNLOAD</a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/p/PTTK-Oddzia%C5%82-W%C4%99drowiec-61551716627368/?locale=pl_PL"
+                  class="fb-link"
+                  >Facebook</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <h1>Nasze Wycieczki</h1>
+
+        <div class="trips-grid">
+          <article class="trip-card">
+            <div class="trip-header">
+              <span class="trip-date">31.01.2026</span>
+              <h2 class="trip-location">Praděd</h2>
+            </div>
+            <img
+              src="../images/plakaty_new/pradziad.PNG"
+              alt="Praděd"
+              class="trip-img"
+            />
+            <div class="trip-body">
+              <p class="trip-description">
+                Na zakończenie styczniowych wędrówek...
+              </p>
+              <a
+                href="../archiwum/2026/pradziad310126.pdf"
+                target="_blank"
+                class="pdf-button"
+                >Zobacz szczegóły (PDF)</a
+              >
+            </div>
+            <div class="trip-availability status-red">Brak miejsc</div>
+          </article>
+
+          <article class="trip-card">
+            <div class="trip-header">
+              <span class="trip-date">14.02.2026</span>
+              <h2 class="trip-location">Hrebienok</h2>
+            </div>
+            <img
+              src="../images/plakaty_new/hrebeniok.PNG"
+              alt="hrebeniok"
+              class="trip-img"
+            />
+            <div class="trip-body">
+              <p class="trip-description">
+                14 lutego 2026 zapraszamy na wycieczkę w słowackie Tatry.
+                Powędrujemy do Wodospadów Zimnej Wody, czyli grupy kilku kaskad,
+                które już ponad 100 lat temu były popularnym celem turystycznym,
+                odwiedzanym przez kuracjuszy przebywających w Starym Smokowcu.
+              </p>
+              <a
+                href="../archiwum/2026/hrebeniok.pdf"
+                target="_blank"
+                class="pdf-button"
+                >Zobacz szczegóły (PDF)</a
+              >
+            </div>
+            <div class="trip-availability status-green">Wolne miejsca: 5</div>
+          </article>
+          <article class="trip-card">
+            <div class="trip-header">
+              <span class="trip-date">08.03.2026</span>
+              <h2 class="trip-location">MBŚ - Równica</h2>
+            </div>
+            <img
+              src="../images/plakaty_new/rownica.png"
+              alt="równica"
+              class="trip-img"
+            />
+            <div class="trip-body">
+              <p class="trip-description">
+                Zapraszamy na klasyczną trasę tatrzańską...
+              </p>
+              <a
+                href="../archiwum/2026/mbs_rowniba.pdf"
+                target="_blank"
+                class="pdf-button"
+                >Zobacz szczegóły (PDF)</a
+              >
+            </div>
+            <div class="trip-availability status-green">Wolne miejsca: 35</div>
+          </article>
+        </div>
+      </main>
+    </div>
+
+    <footer class="main-footer">
+      <p>
+        &copy; 2026 PTTK WĘDROWIEC Odział Zabrze. Wszystkie prawa zastrzeżone.
+      </p>
+    </footer>
+  </body>
+</html>

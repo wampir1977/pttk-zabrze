@@ -169,18 +169,108 @@ body {
   font-size: 1.2rem;
   font-weight: 300;
 }
+
+/* Siatka - upewnij się, że jest tak: */
 .trips-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto);
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr); /* Dwie kolumny */
+  gap: 25px;
+  margin-top: 20px;
 }
+
+/* Karta wycieczki */
 .trip-card {
-  background: #f9f9f9;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden; /* Aby zdjęcie nie wystawało poza zaokrąglone rogi */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.trip-card:hover {
+  transform: translateY(-5px); /* Delikatne uniesienie po najechaniu */
+}
+
+/* Nagłówek karty */
+.trip-header {
   padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  background-color: #f8fbf8;
   text-align: center;
+}
+
+.trip-date {
+  font-size: 0.9rem;
+  color: #4a7c2c;
+  font-weight: bold;
+}
+
+.trip-location {
+  font-size: 1.1rem;
+  margin-top: 5px;
+  color: #1a2e1a;
+}
+
+/* Zdjęcie */
+.trip-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover; /* Dopasowuje zdjęcie bez deformacji */
+  display: block;
+}
+
+/* Treść karty */
+.trip-body {
+  padding: 15px;
+  flex-grow: 1; /* Pozwala opisowi zająć dostępną przestrzeń */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.trip-description {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* Przycisk PDF */
+.pdf-button {
+  display: inline-block;
+  background-color: #1a2e1a;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.pdf-button:hover {
+  background-color: #4a7c2c;
+}
+
+/* Poprawka kolorów statusu na dole kafelka */
+.trip-availability {
+  padding: 8px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: #1a2e1a;
+}
+
+/* Dodaj te klasy pomocnicze, by móc sterować kolorem tła */
+.status-green {
+  background-color: #95bd3d; /* Zielony dla wolnych miejsc */
+}
+
+.status-red {
+  background-color: #de2323; /* Czerwony dla braku miejsc */
+  color: white;
 }
 /* RESPONSYWNOŚĆ */
 @media (max-width: 768px) {
@@ -203,5 +293,17 @@ body {
 
   .content {
     order: 1;
+  }
+}
+/* Responsywność dla telefonów */
+@media (max-width: 992px) {
+  .trips-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolumny na tabletach */
+  }
+}
+
+@media (max-width: 600px) {
+  .trips-grid {
+    grid-template-columns: 1fr; /* 1 kolumna na telefonach */
   }
 }
