@@ -272,6 +272,465 @@ body {
   background-color: #de2323; /* Czerwony dla braku miejsc */
   color: white;
 }
+/* Układ przycisków w karcie wycieczki */
+.trip-buttons-row {
+  display: flex;
+  gap: 10px;
+}
+
+.action-button {
+  flex: 1; /* Każdy przycisk zajmuje dokładnie połowę */
+  text-decoration: none;
+  padding: 10px 5px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.85rem;
+  transition: all 0.3s;
+}
+
+.gpx-button {
+  background-color: #ffffff;
+  color: #4a7c2c;
+  border: 2px solid #4a7c2c;
+}
+
+.gpx-button:hover {
+  background-color: #4a7c2c;
+  color: white;
+}
+
+.pdf-button {
+  background-color: #1a2e1a;
+  color: white;
+  border: 2px solid #1a2e1a;
+}
+
+.pdf-button:hover {
+  background-color: #4a7c2c;
+  border-color: #4a7c2c;
+}
+
+/* Styl dla ikony Facebooka */
+.fb-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: #3b5998;
+  color: white !important;
+  border-radius: 50%;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  transition: transform 0.3s;
+}
+
+.fb-icon:hover {
+  transform: scale(1.1);
+  padding-left: 0 !important; /* Nadpisanie Twojego stylu dla hover w menu bocznym */
+}
+/* Styl kart członków Zarządu */
+.members-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.member-card {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Delikatny cień */
+  transition: transform 0.2s ease;
+}
+
+.member-card:hover {
+  transform: translateX(5px);
+  border-color: #95bd3d;
+}
+
+.member-photo {
+  width: 120px;
+  height: 150px;
+  border-radius: 12px; /* Zaokrąglone rogi */
+  object-fit: cover;
+  margin-right: 25px;
+  border: 1px solid #e0e0e0;
+}
+
+.member-info h3 {
+  margin: 0;
+  color: #1a2e1a;
+  font-size: 1.2rem;
+}
+
+.member-info .position {
+  color: #4a7c2c;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.member-info p {
+  margin: 2px 0;
+  font-size: 0.95rem;
+}
+.contact-link {
+  text-decoration: none;
+  color: #2c3e50; /* Spójny kolor z resztą tekstu */
+  transition: color 0.3s;
+}
+
+.contact-link:hover {
+  color: #4a7c2c; /* Kolor zmienia się na zielony po najechaniu */
+  text-decoration: underline;
+}
+/* Układ strony kontakt */
+.contact-split {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.contact-details {
+  flex: 1;
+}
+
+.contact-details h2 {
+  color: #4a7c2c;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.contact-map {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Układ dla Przodowników */
+.guides-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(280px, 1fr)
+  ); /* Automatyczne 3 kolumny lub 1 na telefonach */
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.guide-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Delikatny cień jak w zarządzie */
+  border-left: 4px solid #95bd3d; /* Akcent kolorystyczny */
+}
+
+.guide-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.guide-photo {
+  width: 70px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 8px; /* Zaokrąglone rogi zgodnie z prośbą */
+  margin-right: 15px;
+}
+
+.guide-basic h3 {
+  font-size: 1.1rem;
+  color: #1a2e1a;
+  margin: 0;
+}
+
+.legitymacja {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.perm-title {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #4a7c2c;
+  margin-bottom: 5px;
+}
+
+.perm-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.perm-list li {
+  font-size: 0.85rem;
+  padding: 2px 0;
+  border-bottom: 1px dashed #f0f0f0;
+}
+
+.perm-list li:last-child {
+  border-bottom: none;
+}
+.ktg-section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  color: #1a2e1a;
+  border-left: 5px solid #95bd3d;
+  padding-left: 15px;
+  margin-bottom: 25px;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+/* Upewnij się, że linki mailowe są wyraźne */
+.contact-link {
+  color: #4a7c2c;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+/* Styl nagłówka KTG */
+.ktg-header-box {
+  display: flex;
+  align-items: center;
+  background-color: #f9fdf9;
+  border: 2px solid #95bd3d;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.ktg-logo-img {
+  height: 80px;
+  width: auto;
+  margin-right: 25px;
+}
+
+/* To wymusza układ dwukolumnowy dla Zarządu KTG */
+.ktg-board-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /* Dokładnie 2 kolumny o równej szerokości */
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.ktg-header-text h2 {
+  margin: 0;
+  color: #1a2e1a;
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+.ktg-header-text p {
+  margin: 5px 0 0 0;
+  color: #4a7c2c;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Stylizacja tabeli GOT */
+.table-container {
+  overflow-x: auto; /* Przewijanie tabeli na telefonach */
+  margin-top: 15px;
+}
+
+.got-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.got-table th,
+.got-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.got-table th {
+  background-color: #1a2e1a;
+  color: white;
+  font-weight: 600;
+}
+
+/* Kolorowe etykiety stopni */
+.badge {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: #fff;
+}
+
+.popularna {
+  background-color: #4a7c2c; /* Ładna, "pttk-owska" zieleń */
+  color: white;
+}
+.brazowa {
+  background-color: #cd7f32;
+}
+.srebrna {
+  background-color: #bdc3c7;
+  color: #2c3e50;
+}
+.zlota {
+  background-color: #f1c40f;
+  color: #2c3e50;
+}
+
+/* Box informacyjny */
+.info-box {
+  background: #eef2ee;
+  border-left: 5px solid #4a7c2c;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.info-box ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.info-box li {
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.info-box li::before {
+  content: "🏔️";
+  position: absolute;
+  left: 0;
+}
+
+.otp-badge {
+  background-color: #3b5998; /* Niebieski - kolor szlaków nizinnych/pieszych */
+  color: white;
+}
+/* Style dla strony Download */
+.download-container {
+  margin-top: 30px;
+}
+
+.download-section {
+  margin-bottom: 30px;
+}
+
+.download-section h3 {
+  color: #1a2e1a;
+  border-bottom: 2px solid #95bd3d;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+.download-list {
+  list-style: none;
+  padding: 0;
+}
+
+.download-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+  border: 1px solid #eee;
+}
+
+.download-item:hover {
+  transform: translateX(10px);
+  border-color: #95bd3d;
+  background-color: #f9fdf9;
+}
+
+.file-type {
+  background-color: #e74c3c;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+/* Styl dla szybkiego pobierania pod tabelami */
+.quick-download {
+  background-color: #f0f3f0;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 20px;
+  border: 1px dashed #95bd3d;
+}
+
+.quick-download p {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Dyskretna stopka administratora */
+.site-footer {
+  background-color: #1a2e1a; /* Ciemna zieleń spójna z nagłówkiem */
+  color: #bdc3c7;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 40px;
+  border-top: 3px solid #95bd3d;
+}
+
+.admin-link,
+.whatsapp-link {
+  color: #95bd3d;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.admin-link:hover,
+.whatsapp-link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.whatsapp-link {
+  font-weight: bold;
+}
+/* Responsywność dla małych ekranów */
+@media (max-width: 600px) {
+  .guides-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* RESPONSYWNOŚĆ */
 @media (max-width: 768px) {
   .main-header {
@@ -305,5 +764,61 @@ body {
 @media (max-width: 600px) {
   .trips-grid {
     grid-template-columns: 1fr; /* 1 kolumna na telefonach */
+  }
+}
+/* Responsywność dla kart członków */
+@media (max-width: 480px) {
+  .member-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .member-photo {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+/* Dostosowanie dla urządzeń mobilnych */
+@media (max-width: 900px) {
+  .contact-split {
+    flex-direction: column;
+  }
+
+  .contact-map {
+    width: 100%;
+  }
+}
+/* Responsywność dla nagłówka KTG */
+@media (max-width: 600px) {
+  .ktg-header-box {
+    flex-direction: column;
+    text-align: center;
+  }
+  .ktg-logo-img {
+    margin-right: 0;
+    margin-bottom: 15px;
+    height: 60px;
+  }
+}
+/* Poprawka dla telefonów, żeby kafelki nie były za szerokie */
+@media (max-width: 450px) {
+  .ktg-board-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .member-card {
+    flex-direction: column; /* Zdjęcie nad tekstem na małych ekranach */
+    text-align: center;
+  }
+
+  .member-photo {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+/* Na bardzo małych ekranach (telefony) zmieniamy na jedną kolumnę */
+@media (max-width: 850px) {
+  .ktg-board-grid {
+    grid-template-columns: 1fr;
   }
 }
