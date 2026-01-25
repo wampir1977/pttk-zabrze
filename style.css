@@ -310,7 +310,44 @@ body {
   background-color: #4a7c2c;
   border-color: #4a7c2c;
 }
+/* Efekt szarości dla sekcji nadchodzącej */
+.upcoming-grayscale .trip-card {
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: all 0.4s ease;
+}
 
+.upcoming-grayscale .trip-img {
+  height: 250px; /* Nieco wyższe zdjęcie, skoro nie ma opisu pod spodem */
+  object-fit: cover;
+}
+
+/* Kolor statusu dla planowanych */
+.status-gray {
+  background-color: #bdc3c7;
+  color: #2c3e50;
+  padding: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Rozdzielacz sekcji */
+.section-divider {
+  margin: 40px 0;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    #95bd3d,
+    transparent
+  );
+}
+.section-title-alt {
+  color: #1a2e1a;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
 /* Styl dla ikony Facebooka */
 .fb-icon {
   display: inline-flex;
