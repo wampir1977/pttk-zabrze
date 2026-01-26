@@ -11,7 +11,64 @@ body {
   color: #2c3e50;
   background-color: #f0f3f0; /* Jasny, "leśny" szary */
 }
+/* Wyśrodkowana stylizacja nagłówka Aktualności z dwiema ikonami */
+.content h1 {
+  font-size: 2.2em;
+  color: #1a2e1a;
+  padding-bottom: 15px;
+  margin: 20px 0 40px 0;
+  border-bottom: 4px solid #95bd3d;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.1);
 
+  /* Wyśrodkowanie */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px; /* Odstęp między ikonami a tekstem */
+
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Ikona przed napisem */
+.content h1::before {
+  content: "🏔️";
+  font-size: 0.8em;
+}
+
+/* Ikona po napisie */
+.content h1::after {
+  content: "🏔️";
+  font-size: 0.8em;
+}
+/* Dodatkowy odstęp dla sekcji poniżej, aby nie "kleiły" się do linii */
+.tech-info-box {
+  margin-top: 10px;
+}
+/* Stylowy rozdzielacz sekcji */
+.section-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 40px 0;
+  color: #95bd3d; /* Kolor zielony z logo */
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+.section-divider:not(:empty)::before {
+  margin-right: 0.5em;
+}
+
+.section-divider:not(:empty)::after {
+  margin-left: 0.5em;
+}
 /* Nagłówek */
 .main-header {
   background-color: #1a2e1a; /* Ciemna zieleń z logo */
