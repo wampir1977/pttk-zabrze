@@ -805,6 +805,59 @@ body {
   background-color: #ffffff;
   transform: translateY(-2px);
 }
+/* Styl dla kafelka najbliższej wycieczki */
+.next-trip-promo {
+  background: linear-gradient(135deg, #1a2e1a 0%, #2e4d2e 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  border-left: 8px solid #95bd3d;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.promo-badge {
+  background-color: #95bd3d;
+  color: #1a2e1a;
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.next-trip-promo h2 {
+  margin-bottom: 10px;
+  font-size: 1.8em;
+}
+
+.promo-date {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #95bd3d;
+  margin-bottom: 15px;
+}
+
+.promo-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #95bd3d;
+  color: #1a2e1a;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition:
+    transform 0.2s,
+    background-color 0.2s;
+}
+
+.promo-button:hover {
+  background-color: #a8d145;
+  transform: translateY(-2px);
+}
 
 /* Responsywność dla boxu technologicznego */
 @media (max-width: 600px) {
