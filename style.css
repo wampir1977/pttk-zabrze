@@ -761,6 +761,58 @@ body {
 .whatsapp-link {
   font-weight: bold;
 }
+/* Styl dla sekcji GPX na stronie głównej */
+.tech-info-box {
+  background: linear-gradient(135deg, #1a2e1a 0%, #2e7d32 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tech-content {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.tech-icon {
+  font-size: 50px;
+}
+
+.tech-text h2 {
+  color: #95bd3d;
+  margin-bottom: 10px;
+  border: none; /* Usuwamy domyślną linię pod nagłówkiem jeśli jest */
+}
+
+.tech-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #95bd3d;
+  color: #1a2e1a;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition:
+    transform 0.2s,
+    background-color 0.2s;
+}
+
+.tech-link:hover {
+  background-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Responsywność dla boxu technologicznego */
+@media (max-width: 600px) {
+  .tech-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 /* Responsywność dla małych ekranów */
 @media (max-width: 600px) {
   .guides-grid {
