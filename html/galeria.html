@@ -110,7 +110,55 @@
         </nav>
       </aside>
 
-      <main class="content"></main>
+      <main class="content">
+        <h1>Galeria zdjęć grupowych</h1>
+        <p style="text-align: center; margin-bottom: 30px">
+          Nasze wspólne chwile na szlakach. Kliknij przycisk, aby pobrać zdjęcie
+          w pełnej rozdzielczości.
+        </p>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <div class="gallery-img-container">
+              <img
+                src="../images/galeria/malinowskaskala.jpeg"
+                alt="zdjęcie na skrzycznem"
+              />
+            </div>
+            <div class="gallery-info">
+              <h3>Szrzyczne</h3>
+              <p>Zimowe wejście - 07.12.2025</p>
+              <a
+                href="../images/galeria/malinowskaskala.jpeg"
+                download
+                class="download-photo-btn"
+              >
+                <span>📥</span> Pobierz zdjęcie
+              </a>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-img-container">
+              <img
+                src="../images/galeria/tatry_grupa.jpg"
+                alt="Grupa w Tatrach"
+              />
+            </div>
+            <div class="gallery-info">
+              <h3>Tatry Wysokie</h3>
+              <p>Wycieczka koła Horyzont - jesień 2025</p>
+              <a
+                href="../images/galeria/tatry_grupa.jpg"
+                download
+                class="download-photo-btn"
+              >
+                <span>📥</span> Pobierz zdjęcie
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
 
     <footer class="main-footer">
@@ -133,5 +181,36 @@
         </p>
       </div>
     </footer>
+    <div id="galleryModal" class="modal">
+      <span class="close-modal">&times;</span>
+      <img class="modal-content" id="img01" />
+      <div id="caption"></div>
+    </div>
+
+    <script>
+      const modal = document.getElementById("galleryModal");
+      const modalImg = document.getElementById("img01");
+      const captionText = document.getElementById("caption");
+      const images = document.querySelectorAll(".gallery-img-container img");
+
+      images.forEach((img) => {
+        img.onclick = function () {
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+        };
+      });
+
+      document.querySelector(".close-modal").onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // Zamknij po kliknięciu poza zdjęciem
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
   </body>
 </html>
