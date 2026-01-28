@@ -1509,7 +1509,509 @@ body {
   font-size: 1rem;
   line-height: 1.5;
 }
+/* Stylizacja sekcji przelewu */
+.transfer-box {
+  background-color: #f8fbfd;
+  border: 1px solid #d1e2f3;
+  border-radius: 8px;
+  padding: 20px;
+}
 
+.transfer-info p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.account-number {
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #2980b9;
+}
+
+.transfer-title-info {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px dashed #bdc3c7;
+}
+
+.title-label {
+  font-weight: bold;
+  color: #1a2e1a;
+  margin-bottom: 5px;
+}
+
+.title-example {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  border-left: 4px solid #2980b9;
+  font-style: italic;
+  color: #555;
+}
+/* Stylizacja sekcji przelewu i alertu o wpisowym */
+.transfer-alert {
+  background-color: #fff9e6; /* Kolor zbliżony do sekcji zwolnień "Z" */
+  border: 1px solid #f1c40f;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.alert-icon {
+  font-size: 1.5rem;
+}
+
+.transfer-box {
+  background-color: #f8fbfd;
+  border: 1px solid #d1e2f3;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.account-number {
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  font-size: 1.2rem; /* Powiększony numer dla lepszej widoczności */
+  color: #2980b9;
+  letter-spacing: 1px;
+}
+
+.title-example {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  border-left: 4px solid #2980b9;
+  font-style: italic;
+  margin-top: 10px;
+}
+.transfer-flex-container {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  margin-top: 15px;
+}
+
+.transfer-box {
+  flex: 2;
+  background-color: #f8fbfd;
+  border: 1px solid #d1e2f3;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* Style dla Archiwum */
+.archive-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.month-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e6e0;
+}
+
+.month-header {
+  background: #1a2e1a;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.month-header h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: white;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  text-transform: none;
+}
+
+.archive-list {
+  list-style: none;
+  padding: 0;
+}
+
+.archive-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s;
+}
+
+.archive-item:last-child {
+  border-bottom: none;
+}
+.archive-item:hover {
+  background-color: #f9fff9;
+}
+
+.trip-date {
+  display: block;
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: bold;
+}
+
+.trip-name {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.download-links {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-archive {
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: #f0f3f0;
+  color: #2c3e50;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+.btn-archive:hover {
+  background: #95bd3d;
+  color: white;
+  border-color: #95bd3d;
+}
+
+.btn-archive.gpx:hover {
+  background: #2980b9;
+  border-color: #2980b9;
+}
+
+.no-trips {
+  padding: 20px;
+  color: #999;
+  font-style: italic;
+}
+
+/* RWD dla archiwum */
+@media (max-width: 600px) {
+  .archive-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+/* --- ARCHIWUM WYCIECZEK --- */
+.archive-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.month-block {
+  border-left: 4px solid #95bd3d;
+  padding-left: 20px;
+}
+
+.month-label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.month-label h2 {
+  margin: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  font-size: 1.5rem !important;
+}
+
+.archive-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e0e0;
+}
+
+.trip-main-info h3 {
+  margin: 5px 0 0 0;
+  color: #1a2e1a;
+}
+
+.trip-date {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: bold;
+}
+
+.archive-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.arch-btn {
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Kolory przycisków */
+.arch-btn.pdf {
+  background: #f8f9fa;
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+}
+.arch-btn.pdf:hover {
+  background: #e74c3c;
+  color: white;
+}
+
+.arch-btn.gpx {
+  background: #f8f9fa;
+  color: #2980b9;
+  border: 1px solid #2980b9;
+}
+.arch-btn.gpx:hover {
+  background: #2980b9;
+  color: white;
+}
+
+.month-empty {
+  opacity: 0.6;
+}
+
+.status-tag {
+  font-size: 0.8rem;
+  background: #ddd;
+  padding: 2px 10px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+/* --- STYLE ARCHIWUM --- */
+.archive-main-title {
+  margin-bottom: 40px;
+}
+
+.month-group {
+  margin-bottom: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.month-header {
+  background: #1a2e1a;
+  color: white;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.month-header h2 {
+  margin: 0 !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-size: 1.4rem !important;
+  padding: 0 !important;
+}
+
+.trip-list {
+  padding: 10px 0;
+}
+
+.trip-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  border-bottom: 1px solid #eee;
+}
+
+.trip-item:last-child {
+  border-bottom: none;
+}
+
+.trip-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+.trip-date {
+  font-size: 0.8rem;
+  color: #7f8c8d;
+  font-weight: bold;
+}
+
+.trip-files {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-dl {
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-dl.pdf {
+  border: 1px solid #e74c3c;
+  color: #e74c3c;
+}
+.btn-dl.pdf:hover {
+  background: #e74c3c;
+  color: white;
+}
+
+.btn-dl.gpx {
+  border: 1px solid #2980b9;
+  color: #2980b9;
+}
+.btn-dl.gpx:hover {
+  background: #2980b9;
+  color: white;
+}
+
+.month-empty {
+  opacity: 0.7;
+}
+.comming-soon {
+  font-size: 0.8rem;
+  margin-left: auto;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .trip-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .trip-files {
+    width: 100%;
+  }
+  .btn-dl {
+    flex: 1;
+    text-align: center;
+  }
+}
+/* Responsywność */
+@media (max-width: 768px) {
+  .archive-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .archive-actions {
+    width: 100%;
+  }
+  .arch-btn {
+    flex: 1;
+    justify-content: center;
+  }
+}
+/* --- STYLE STRONY W BUDOWIE --- */
+.under-construction {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.construction-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  animation: bounce 2s infinite;
+}
+
+.under-construction h1 {
+  border-bottom: none !important;
+  box-shadow: none !important;
+  margin-bottom: 10px !important;
+}
+
+.under-construction p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.construction-actions {
+  margin-top: 30px;
+}
+
+.back-home-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #95bd3d;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.back-home-btn:hover {
+  background-color: #1a2e1a;
+}
+
+/* Animacja ikony */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+/* Responsywność */
+@media (max-width: 768px) {
+  .transfer-flex-container {
+    flex-direction: column;
+  }
+  .qr-container {
+    width: 100%;
+  }
+}
 /* Responsywność */
 @media (max-width: 600px) {
   .continuity-box {
