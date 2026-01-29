@@ -2003,6 +2003,44 @@ body {
     transform: translateY(-10px);
   }
 }
+/* Styl dla licznika odwiedzin */
+.visit-counter {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(
+    26,
+    46,
+    26,
+    0.9
+  ); /* Ciemna zieleń pasująca do Twojego nagłówka */
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #95bd3d; /* Jasnozielona obwódka */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  font-size: 0.8rem;
+  color: white;
+}
+
+.visit-counter p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.visit-counter img {
+  height: 20px; /* Dopasowanie wielkości cyferek do tekstu */
+  filter: brightness(0.9); /* Delikatne przyciemnienie, by nie raziło */
+}
+
+/* Ukrywamy na bardzo małych telefonach, żeby nie zasłaniał treści */
+@media (max-width: 480px) {
+  .visit-counter {
+    display: none;
+  }
+}
 /* Responsywność */
 @media (max-width: 768px) {
   .transfer-flex-container {
