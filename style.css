@@ -2099,7 +2099,35 @@ body {
   text-align: left; /* W tej tabeli tekst lepiej wygląda wyrównany do lewej */
   padding-left: 20px;
 }
+/* Styl dla ikony Instagrama */
+.ig-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  /* Gradient charakterystyczny dla Instagrama */
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  color: white !important;
+  border-radius: 50%;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  transition: transform 0.3s;
+  margin-left: 5px; /* Odstęp od ikony Facebooka */
+}
 
+.ig-icon:hover {
+  transform: scale(1.1);
+  padding-left: 0 !important;
+}
 /* Responsywność dla małej tabeli */
 @media (max-width: 600px) {
   .simple-table {
