@@ -2034,6 +2034,89 @@ body {
   height: 20px; /* Dopasowanie wielkości cyferek do tekstu */
   filter: brightness(0.9); /* Delikatne przyciemnienie, by nie raziło */
 }
+/* Stylizacja nowej tabeli Przodowników GOT */
+.got-perm-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden; /* Zaokrąglenie rogów tabeli */
+  font-size: 0.9rem;
+}
+
+.got-perm-table th {
+  background-color: #1a2e1a;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.got-perm-table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.got-perm-table .guide-name {
+  font-weight: bold;
+  text-align: left;
+  color: #1a2e1a;
+}
+
+.got-perm-table .guide-leg {
+  color: #666;
+  font-family: monospace;
+}
+
+/* Statusy uprawnień - Kolory tła */
+.perm-status {
+  font-weight: bold;
+  font-size: 0.75rem;
+  transition: all 0.3s;
+}
+
+.perm-status.active {
+  background-color: #95bd3d; /* Zielony dla posiadanych uprawnień */
+  color: #1a2e1a;
+}
+
+.perm-status.inactive {
+  background-color: #e0e0e0; /* Jasny szary dla braku uprawnień */
+  color: #888;
+}
+/* Specyficzne ustawienia dla prostej tabeli pieszej */
+.simple-table {
+  max-width: 600px; /* Ograniczamy szerokość, bo przy 2 kolumnach na całą stronę byłaby za szeroka */
+  margin-left: 0;
+}
+
+.simple-table th,
+.simple-table td {
+  text-align: left; /* W tej tabeli tekst lepiej wygląda wyrównany do lewej */
+  padding-left: 20px;
+}
+
+/* Responsywność dla małej tabeli */
+@media (max-width: 600px) {
+  .simple-table {
+    width: 100%;
+  }
+}
+
+/* Responsywność dla tabeli */
+@media (max-width: 768px) {
+  .got-perm-table th {
+    font-size: 0.7rem;
+    padding: 8px 4px;
+  }
+  .got-perm-table td {
+    padding: 8px 4px;
+  }
+}
 
 /* Ukrywamy na bardzo małych telefonach, żeby nie zasłaniał treści */
 @media (max-width: 480px) {
